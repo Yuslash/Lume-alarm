@@ -1,0 +1,8 @@
+{
+  "appId": "com.yuslash.lumeclock",
+  "appName": "Lume Clock",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  }
+}

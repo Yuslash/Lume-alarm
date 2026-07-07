@@ -189,11 +189,16 @@ export function playSimulatedAlarmSound(volume: number, audioContextRef: { curre
       playArpeggio();
     }, 2000);
 
+    let isClosed = false;
     return {
       stop: () => {
         clearInterval(interval);
+        if (isClosed) return;
+        isClosed = true;
         try {
-          ctx.close();
+          if (ctx && ctx.state !== 'closed') {
+            ctx.close();
+          }
         } catch (e) {}
       }
     };

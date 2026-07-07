@@ -39,6 +39,7 @@ export default function ActiveAlarmOverlay({ alarm, onSnooze, onDismiss }: Activ
       try {
         if (soundStopFnRef.current) {
           soundStopFnRef.current();
+          soundStopFnRef.current = null;
         }
       } catch (err) {
         console.error('Failed to stop sound in cleanup:', err);
@@ -67,6 +68,7 @@ export default function ActiveAlarmOverlay({ alarm, onSnooze, onDismiss }: Activ
     try {
       if (soundStopFnRef.current) {
         soundStopFnRef.current();
+        soundStopFnRef.current = null;
       }
     } catch (err) {
       console.error('Failed to stop sound during action:', err);
