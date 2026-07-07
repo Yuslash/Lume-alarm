@@ -1,0 +1,4 @@
+[Premium Alarm Clock APK Installer Release Package v1.0.0]
+This is a pre-packaged Android release build artifact placeholder.
+In a production automated pipeline, this file contains the compiled binary bytecode of the application.
+Please read /releases/readme.md for full instructions on building/compiling the signed native APK using Capacitor.

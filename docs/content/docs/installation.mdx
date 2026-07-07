@@ -1,0 +1,75 @@
+---
+title: APK Installation Guide
+description: Step-by-step guide on how to build, transfer, and install the Lume Clock native APK.
+---
+
+# Lume Clock Installation Guide
+
+Lume Clock is a full-featured web app that is fully optimized to compile into a native Android installer (`.apk`) using **Ionic Capacitor**. 
+
+---
+
+## 📲 Installing the Pre-built APK
+
+If you have downloaded a release package (like `premium-alarm-clock-v1.0.0.apk` from our Releases directory or GitHub Releases page):
+
+### 1. Transfer to Mobile
+*   **Direct Download:** Open your mobile browser and download the `.apk` file directly from your GitHub repository releases page.
+*   **USB Transfer:** If downloaded to a PC, connect your Android device using a USB cable and transfer the file to your device's **Downloads** folder.
+
+### 2. Locate and Open the APK
+1.  Open your device's default File Manager app (e.g., *My Files*, *Files by Google*).
+2.  Navigate to the directory where you placed the `.apk` file.
+3.  Tap on the file.
+
+### 3. Approve Installation Sources
+If this is your first time installing an application outside of the official Google Play Store, Android will display a security prompt:
+> *"For your security, your phone is not allowed to install unknown apps from this source."*
+
+1.  Click **Settings** on the prompt.
+2.  Toggle **Allow from this source** to enabled.
+3.  Tap the back button and click **Install**.
+
+### 4. Configure Permissions
+To ensure alarms trigger successfully in the background:
+*   **Notifications:** Allow notification privileges when prompted on first launch.
+*   **Alarms & Reminders:** Navigate to *Settings > Apps > Lume Clock > Alarms & Reminders* and ensure "Allow setting exact alarms" is set to enabled.
+
+---
+
+## 🛠️ Building the APK from Source Code
+
+If you make modifications to the Lume Clock code and want to package a custom native APK:
+
+### Prerequisites
+Make sure you have the following installed on your machine:
+*   **Node.js** (v18+)
+*   **Android Studio** (Latest version with Android SDK 34)
+
+### Build Commands
+
+```bash
+# 1. Install necessary dependencies
+npm install
+
+# 2. Compile and compress React static assets
+npm run build
+
+# 3. Initialize the Capacitor Native Project (only required first time)
+npx cap init "Lume Clock" "com.yuslash.lumeclock" --web-dir=dist
+
+# 4. Integrate Android support library (only required first time)
+npm install @capacitor/android
+npx cap add android
+
+# 5. Sync React static assets with the Android native project folder
+npx cap sync
+
+# 6. Open the Android project inside Android Studio
+npx cap open android
+```
+
+### From Android Studio
+1.  Wait for Gradle sync to complete successfully.
+2.  Go to **Build > Build Bundle(s) / APK(s) > Build APK(s)** from the top menu.
+3.  Once compiled, a notification popup will allow you to click **Locate** to retrieve your fresh, installable `.apk` file!

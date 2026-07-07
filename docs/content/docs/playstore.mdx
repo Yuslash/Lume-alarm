@@ -1,0 +1,63 @@
+---
+title: Play Store Submission Guide
+description: Essential guidelines, asset specifications, and questionnaires to upload Lume Clock on the Google Play Console.
+---
+
+# Play Store Submission Guide
+
+This guide will walk you through uploading **Lume Clock** to the Google Play Console and configuring the store page to ensure swift approval from Google's review team.
+
+---
+
+## 🎨 Asset checklist
+
+When setting up your Play Store listing, prepare the following graphic files:
+
+| Graphic Asset | Required Dimension | Allowed Formats | Important Guidelines |
+| :--- | :--- | :--- | :--- |
+| **App Icon** | 512 x 512 px | 32-bit PNG | Must have transparent backing. |
+| **Feature Graphic** | 1024 x 500 px | JPEG or 24-bit PNG | Avoid putting important titles near edges. *Use `/src/assets/images/lume_clock_promo_1783396821396.jpg`.* |
+| **Mobile Screens** | Minimum 2 screens | JPEG or PNG | Upload portrait screenshots (9:16) showing the main dashboard and active alarm overlay. |
+
+---
+
+## ✍️ Metadata Descriptions
+
+### Short Description
+> Ambient alarm clock with custom music links and fluid sunrise weather themes.
+
+### Full Description
+> Transform your morning routine with Lume Clock — a beautifully designed bedside companion. Lume Clock pairs elegant typography, immersive atmospheric gradients, and physical gesture controls to create a serene waking experience.
+>
+> **Features:**
+> *   **Ambient Weathers:** Relaxing, low-battery particle simulations that shift beautifully across Midnight Sparkles, Dawn Sunrises, and Sunset Glows.
+> *   **Music Alarms:** Select Spotify, Apple Music, or YouTube Music links to personalize your morning chord synthesis.
+> *   **Dynamic Gestures:** Tactile swipe-controls to Snooze or Stop alarms using snapping physical motions.
+> *   **Absolute Privacy:** Offline-first and zero-telemetry. Your alarm preferences remain solely on your device.
+
+---
+
+## 📋 Critical Declarations & Questionnaires
+
+To pass the Play Store automatic review filters, complete your Console forms using these exact answers:
+
+### 1. Data Safety Questionnaire
+Lume Clock is private and doesn't collect any user metrics.
+*   *Does your app collect or share any of the required user data types?*  
+    👉 **No**
+
+### 2. Content Rating (Alcohols, Violence, etc.)
+Lume Clock is a simple clocks utility.
+*   *App Category:* Utility / Clock
+*   *Violence, Sexual, Offensive content, or Gambling:* Select **No** to all questions.
+*   *Resulting Rating:* **PEGI 3 / Everyone** (Worldwide).
+
+### 3. Target Audience
+*   *What are the target age groups?*  
+    👉 Select **13-15**, **16-17**, and **18 and older**.
+*   *Could your store listing unintentionally appeal to children under 13?*  
+    👉 Select **No** (Design is clean, neutral, and minimalist for adult bedroom aesthetics).
+
+### 4. Alarms Permission declaration
+*   *Why does your app use `SCHEDULE_EXACT_ALARM`?*  
+    👉 *"Lume Clock is a primary alarm clock application. It utilizes exact alarm triggers to allow users to establish wake-up routines, play synthesized waking chords, and adjust bedside theme backdrops at the exact minute configured by the user. This permission is essential to ensure reliability even during device sleep states."*

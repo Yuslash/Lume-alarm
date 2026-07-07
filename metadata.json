@@ -1,0 +1,6 @@
+{
+  "name": "Lume Alarm Clock",
+  "description": "A premium alarm clock application featuring playlist integration, gesture controls, volume settings, and animated weather backgrounds.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
